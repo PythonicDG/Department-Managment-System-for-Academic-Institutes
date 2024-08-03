@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Login</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'staff_login/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Staff Login</div>
+        <div class="login-content">
+            <form action="{% url 'staff_login' %}" method="post">
+                {% csrf_token %}
+                <div class="input-box">
+                    <span class="details">Username</span>
+                    {{ form.username }}
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    {{ form.password }}
+                </div>
+                <div class="button">
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+            <div class="login-link">
+                <a href="{% url 'admin_login' %}">Admin Login</a>
+            </div>
+            <div class="register-link">
+                <a href="{% url 'register' %}">Register</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

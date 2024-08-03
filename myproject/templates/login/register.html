@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'register/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Register</div>
+        <div class="content">
+            <form action="{% url 'register' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="user-details">
+                    <div class="input-box">
+                        <label for="{{ form.full_name.id_for_label }}">Full Name</label>
+                        {{ form.full_name }}
+                    </div>
+                    <div class="input-box">
+                        <label for="{{ form.email.id_for_label }}">Email Address</label>
+                        {{ form.email }}
+                    </div>
+                    <div class="input-box">
+                        <label for="{{ form.username.id_for_label }}">Username</label>
+                        {{ form.username }}
+                    </div>
+                    <div class="input-box">
+                        <label for="{{ form.password1.id_for_label }}">Password</label>
+                        {{ form.password1 }}
+                    </div>
+                    <div class="input-box">
+                        <label for="{{ form.password2.id_for_label }}">Confirm Password</label>
+                        {{ form.password2 }}
+                    </div>
+                    <div class="input-box">
+                        <label for="{{ form.contact_number.id_for_label }}">Contact Number</label>
+                        {{ form.contact_number }}
+                    </div>
+                    <div class="input-box">
+                        <label for="{{ form.department.id_for_label }}">Department</label>
+                        {{ form.department }}
+                    </div>
+                    <div class="input-box">
+                        <label for="{{ form.profile_picture.id_for_label }}">Profile Picture</label>
+                        {{ form.profile_picture }}
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+            <div class="register-link">
+                <a href="{% url 'staff_login' %}">Staff Login</a> |
+                <a href="{% url 'admin_login' %}">Admin Login</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

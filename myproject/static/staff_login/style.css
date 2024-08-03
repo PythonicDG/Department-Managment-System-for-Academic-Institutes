@@ -1,0 +1,97 @@
+/* Base styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4; /* Light gray background for contrast */
+    margin: 0;
+    color: #333;
+}
+
+/* Container styles */
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Title styles */
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #386bc0; /* Primary color */
+}
+
+/* Content styles */
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input box styles */
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Button styles */
+.button {
+    text-align: center;
+}
+
+.button input {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #386bc0; /* Primary color */
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button input:hover {
+    background: #2e5b9b; /* Darker shade of primary color */
+    transform: translateY(-2px);
+}
+
+/* Link styles */
+.login-link, .register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-link a, .register-link a {
+    color: #386bc0; /* Primary color */
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover, .register-link a:hover {
+    text-decoration: underline;
+    color: #2e5b9b; /* Darker shade of primary color */
+}
